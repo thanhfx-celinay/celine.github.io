@@ -1,0 +1,165 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/*bộ tổng quảt*/
+:root{
+    --primary-color:#047aed;
+}/*cú pháp cho thuôc tính tùy chỉnh*/
+
+*{
+    box-sizing: border-box;/*áp  dụng với mọi phần tử css
+       cho phép thêm paddinig borde..mà k cần thêm with*/
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lato',sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+ul{
+   text-decoration: none; /*bỏ gạch dưới*/
+   color: #333;
+}
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;/*top và bottom 10px right left là 0*/
+
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;
+}
+/*navbar*/
+.navbar{
+    background-color: var(--primary-color);
+    color: #ffff;
+    height: 70px;
+}
+.navbar ul{
+    display: flex;/*các phàn tử navigation tự đông xếp thành 1 hàng*/
+}
+.navbar.flex{
+    justify-content: space-between;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin:  0 5px;
+    text-decoration: none;
+}
+.navbar a:hover{/*hiệu ứng khi chuôt đi qua*/
+    border-bottom: 2px solid #fff;
+}
+
+/* Showcase */
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+.showcase .grid{
+    overflow: visible;/*xoa xóabor thanh cuộn*/
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px soid #b4becd;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    
+}
+.showcase-form input:focus{
+    outline: none;
+}
+.card{
+    background-color: #eadddd;
+    color: #333;
+    border-radius: 10px;/*bo góc xung quanh  class card*/
+    box-shadow: 0 3px 10px rgba(0,0,0,0,2); /*lệnh ngang - lệnh dọc 3px  độ mờ là 10px và mauf đen*/
+    margin: 10px;
+    padding: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.bth-outline{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.btn:hover{
+    transform: scale(0.98);
+}
+.showcase::before,
+.showcase::after{ /*độ nghiên*/
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+/* Stats */
+.stats{
+    padding-top: 100px;
+}
+
+.stats-heading{
+    max-width: 500px;
+    margin: auto;
+}
+.stats .grid h3{
+    font-size: 34px;
+}
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Cli */
+.cli.grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.cli.grid >*:first-child{
+    grid-column: 1 /span 2;
+    grid-row: 1/span 2;
+}
